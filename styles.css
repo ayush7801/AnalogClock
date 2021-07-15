@@ -11,7 +11,6 @@ html {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     font-family: 'helvetica neue';
-    text-align: center;
     font-size: 10px;
   }
 
@@ -23,6 +22,26 @@ html {
     min-height: 100vh;
     align-items: center;
   }
+
+  .headcontainer{
+      position: absolute;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+  }
+.head{
+    position: absolute;
+    top: 0;
+    margin: 0 auto;
+    font-size: 3rem;
+    font-family: 'Otomanopee One', sans-serif;
+    background: linear-gradient(to top,rgb(10, 223, 205) 50%, rgb(80, 178, 190) 100%);
+    padding: 20px 20px;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 0 30px 3px #0adfcd;
+}
 
 .clock{
     width: 30rem;
