@@ -22,19 +22,31 @@
         const hour_hand = document.getElementById("hour");
         const min_hand = document.getElementById("minute");
         const sec_hand = document.getElementById("sec");
+        let i = 0,j=0,k=0;
+        
         function initialSet(){
             const  date = new Date();
             console.log(date);
+            
             const seconds = date.getSeconds();
-            const secondsDegrees = 6*seconds + 90;
+            if(seconds === 00){
+                i+=360;
+            }
+            const secondsDegrees = i + 6*seconds + 90;
             sec_hand.style.transform = `rotate(${secondsDegrees}deg)`;
 
             const mins = date.getMinutes();
-            const minDegrees = 6*mins + 90;
+            if(mins === 00){
+                j+=360;
+            }
+            const minDegrees = j + 6*mins + 90;
             min_hand.style.transform = `rotate(${minDegrees}deg)`;
 
             const hours = date.getHours();
-            const hourDegrees = 30*hours + 90;
+            if(hours === 00){
+                k+=360;
+            }
+            const hourDegrees = k + 30*hours + 90;
             hour_hand.style.transform = `rotate(${hourDegrees}deg)`;
         }
         
